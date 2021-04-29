@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "d3a1493f-8d4a-4985-b7ad-a43045202b85",
+		"name": "Reece",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "SaveAddressBook1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Paint Suppliers\",\n  \"entries\": [\n    {\n      \"firstName\": \"Tom\",\n      \"lastName\": \"Cruise\",\n      \"phoneNumbers\": [\n        \"408-8865-8777\",\n        \"732-8977-5553\"\n      ]\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveEmptyAddressBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Paint Suppliers\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveAddressBook2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Primer Suppliers\",\n  \"entries\": [\n    {\n      \"firstName\": \"Carlos\",\n      \"lastName\": \"Santana\",\n      \"phoneNumbers\": [\n        \"333-3342-2345\",\n        \"223-4432-5532\"\n      ]\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GetAddressBook",
+			"item": [
+				{
+					"name": "GetAllAddressBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllAddressBookEntries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "EntryOps",
+			"item": [
+				{
+					"name": "SaveAddressBookEntry",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Bruce4\",\n  \"lastName\": \"Lee3\",\n  \"phoneNumbers\": [\n    \"747-7373-7373\",\n    \"553-9848-7379\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks/1/entries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks",
+								"1",
+								"entries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAddressBookEntry",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks/1/entries/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks",
+								"1",
+								"entries",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUniqueAddressBookEntries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/v1/addressbooks/unique",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"v1",
+								"addressbooks",
+								"unique"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
